@@ -8,9 +8,9 @@ sudo apt-get install libxvidcore-dev libx264-dev -y
 sudo apt-get install libgtk2.0-dev -y
 sudo apt-get install libatlas-base-dev gfortran -y
 sudo apt-get install python3-pip -y
-pip3 install numpy==1.26.4
+pip3 install numpy==1.26.4 -y
 apt list python*opencv*
-sudo apt install python3-opencv 
+sudo apt install python3-opencv -y
 apt show python3-opencv
 
 # vidgear install
