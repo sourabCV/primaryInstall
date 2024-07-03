@@ -14,6 +14,8 @@ sudo apt install python3-opencv -y
 apt show python3-opencv
 
 # vidgear install
-pip3 install -U vidgear[asyncio]
+#pip3 install -U vidgear[asyncio]
+pip3 install --no-deps vidgear
+
 
 
