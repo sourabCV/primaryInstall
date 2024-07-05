@@ -24,12 +24,14 @@ pip3 install pyzmq
 echo "Vidgear installation complete."
 
 # anydesk install
-LATEST_URL=$(wget -qO- https://anydesk.com/en/downloads/Raspberry%20Pi | grep -oP '(?<=href=")[^"]+anydesk_[^"]+armhf.deb' | head -n 1)
-LATEST_URL="https://download.anydesk.com${LATEST_URL}"
+LATEST_URL="https://download.anydesk.com/rpi/anydesk_6.3.0-1_armhf.deb"
 wget $LATEST_URL -O anydesk_latest_armhf.deb
 sudo dpkg -i anydesk_latest_armhf.deb
 sudo apt --fix-broken install -y
 rm anydesk_latest_armhf.deb
+sudo apt install libgles-dev libegl-dev -y
+sudo ln -s /usr/lib/arm-linux-gnueabihf/libGLESv2.so /usr/lib/libbrcmGLESv2.so
+sudo ln -s /usr/lib/arm-linux-gnueabihf/libEGL.so /usr/lib/libbrcmEGL.so
 echo "Anydesk installation complete."
 
 # Teamviewer install
